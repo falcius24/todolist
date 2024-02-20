@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(
+    45deg,
+    #f0f0f0,
+    #e6e6e6,
+    #dcdcdc,
+    #d3d3d3,
+    #c9c9c9,
+    #bfbfbf,
+    #b5b5b5,
+    #acacac,
+    #a2a2a2,
+    #999999,
+    #8f8f8f,
+    #858585,
+    #7b7b7b,
+    #727272,
+    #686868,
+    #5e5e5e,
+    #545454,
+    #4b4b4b,
+    #414141,
+    #373737,
+    #2e2e2e,
+    #242424,
+    #1a1a1a,
+    #111111,
+    #070707,
+    #000000
+  ); /* Gradient with 50 shades of gray */
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  text-align: center;
+  color: #f8f8f8;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #ecf0f1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #101111;
+}
+
+.task-buttons {
+  display: flex;
+}
+
+.task-buttons button {
+  margin-left: 5px;
+  background-color: #3498db; 
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-buttons button.delete {
+  background-color: #e74c3c; /* Red color for delete button */
+}
+
+.task-buttons button:hover {
+  background-color: #c0392b;
+}
+
+.task-buttons button.delete:hover {
+  background-color: #c0392b; /* Darker red for delete button on hover */
+}
+
+
+.task-buttons button.complete {
+  background-color: #66e02d;
+}
+
+.task-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.task-buttons button.complete:hover {
+  background-color: #27ae60; 
 }
